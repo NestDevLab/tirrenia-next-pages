@@ -1932,8 +1932,7 @@ a {
   border-top: 5px solid var(--italia-red);
 }
 
-.path-card:nth-child(3) .path-card__label,
-.path-card:nth-child(3) .path-card__cta {
+.path-card:nth-child(3) .path-card__label {
   color: var(--italia-red);
 }
 
@@ -2000,25 +1999,49 @@ a {
 .path-card__cta {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
+  justify-content: center;
   gap: 10px;
+  min-height: 44px;
   margin-top: 26px;
-  color: var(--sea);
+  padding: 10px 18px;
+  border: 1px solid var(--sea);
+  border-radius: 999px;
+  color: white;
+  background: var(--sea);
+  box-shadow: 0 10px 22px rgba(0, 88, 130, 0.16);
   font-size: 0.82rem;
   font-weight: 900;
+  line-height: 1;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 }
 
 .path-card:first-child .path-card__cta {
-  color: #dcebdc;
+  border-color: rgba(255, 255, 255, 0.72);
+  color: white;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 10px 22px rgba(3, 39, 53, 0.2);
+}
+
+.path-card:nth-child(3) .path-card__cta {
+  border-color: var(--italia-red);
+  background: var(--italia-red);
+  box-shadow: 0 10px 22px rgba(178, 74, 57, 0.16);
 }
 
 .path-card__cta::after {
-  content: '↗';
+  content: '→';
   font-size: 1rem;
   transition: transform 180ms ease;
 }
 
+.path-card:hover .path-card__cta {
+  box-shadow: 0 14px 28px rgba(6, 42, 55, 0.22);
+  transform: translateY(-2px);
+}
+
 .path-card:hover .path-card__cta::after {
-  transform: translate(2px, -2px);
+  transform: translateX(3px);
 }
 
 .path-card__trigger {
@@ -2339,6 +2362,10 @@ a {
 
 .site-footer p + p {
   margin-top: 8px;
+}
+
+.back-to-top {
+  display: none;
 }
 
 .language-entry {
@@ -2996,6 +3023,26 @@ a {
     grid-template-columns: 1fr;
     gap: 22px;
   }
+
+  .back-to-top {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 48px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .back-to-top span {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
 }
 
 @media (max-width: 520px) {
@@ -3077,7 +3124,15 @@ a {
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 15vw, 4.2rem);
+    font-size: clamp(2.65rem, 11.5vw, 3.3rem);
+    line-height: 1.02;
+  }
+
+  .section-title,
+  .transition h2,
+  .faq h2 {
+    font-size: clamp(2.2rem, 9.2vw, 2.65rem);
+    line-height: 1.04;
   }
 
   .hero__actions {
@@ -3138,7 +3193,28 @@ a {
   }
 
   .creator-story__text blockquote {
-    font-size: clamp(2rem, 10.5vw, 3rem);
+    font-size: clamp(1.75rem, 8.2vw, 2.2rem);
+    line-height: 1.08;
+  }
+
+  .platform-workspace > h3,
+  .ai-sidebar h3 {
+    font-size: 1.75rem;
+    line-height: 1.08;
+  }
+
+  .lever-card h3,
+  .path-card h3 {
+    font-size: 1.9rem;
+  }
+
+  .path-card__cta {
+    width: 100%;
+  }
+
+  .path-dialog h3 {
+    font-size: 2.2rem;
+    line-height: 1.05;
   }
 
   .creator-ecosystem {
