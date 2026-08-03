@@ -27,6 +27,24 @@ document.querySelectorAll('[data-contact-disabled]').forEach((link) => {
   });
 });
 
+const persistentActions = document.querySelector('[data-persistent-actions]');
+const heroActions = document.querySelector('.hero__actions');
+if (persistentActions instanceof HTMLElement) {
+  const setPersistentActionsVisible = (visible) => {
+    persistentActions.classList.toggle('is-visible', visible);
+  };
+
+  if (heroActions instanceof HTMLElement && 'IntersectionObserver' in window) {
+    const persistentActionsObserver = new IntersectionObserver(
+      ([entry]) => setPersistentActionsVisible(!entry.isIntersecting),
+      { threshold: 0.08 },
+    );
+    persistentActionsObserver.observe(heroActions);
+  } else {
+    setPersistentActionsVisible(true);
+  }
+}
+
 document.querySelectorAll('[data-platform-mockup]').forEach((mockup) => {
   const tabs = [...mockup.querySelectorAll('[data-platform-tab]')];
   const panels = [...mockup.querySelectorAll('[data-platform-panel]')];

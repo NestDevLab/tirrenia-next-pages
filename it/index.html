@@ -1067,14 +1067,19 @@
         </div>
       </div>
     </dialog>
-    <button type="button" class="bot-chat-launcher" data-chat-open aria-haspopup="dialog" aria-controls="tirrenia-bot-dialog">
-      <img src="/assets/tirrenia-bot-avatar.webp" alt="" width="160" height="160">
-      <span>
-        <small>Tirrenia Bot</small>
-        <strong>Chiedi a Tirrenia Bot</strong>
-      </span>
-      <i aria-hidden="true"></i>
-    </button>
+    <nav class="persistent-actions" aria-label="Azioni rapide" data-persistent-actions>
+      <a class="persistent-actions__visit" href="https://wa.me/31644164894?text=Ciao%2C%20ho%20visto%20Tirrenia%20Next.%20Vorrei%20saperne%20di%20pi%C3%B9%20e%20fissare%20una%20visita." target="_blank" rel="noopener noreferrer">
+        <span>Richiedi una visita</span>
+      </a>
+      <a class="persistent-actions__paths" href="#paths">
+        <span>Vai alle proposte</span>
+      </a>
+      <button type="button" class="persistent-actions__bot" data-chat-open aria-haspopup="dialog" aria-controls="tirrenia-bot-dialog">
+        <img src="/assets/tirrenia-bot-avatar.webp" alt="" width="160" height="160">
+        <span>Chiedi al Bot</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </nav>
 
     <footer class="site-footer">
       <div class="site-footer__inner container">
