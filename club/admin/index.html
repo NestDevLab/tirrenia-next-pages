@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Club requests · Tirrenia</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/club-alpha.css">
+  <script src="/assets/club-api-config.js" defer></script>
+  <script src="/assets/club-admin.js" defer></script>
+</head>
+<body class="club-page">
+  <main class="club-wrap club-admin">
+    <h1>Tirrenia requests</h1>
+    <p>Private staff view. A request reserves no seat until you confirm a time interval and contact the visitor. Confirmation is unavailable until an opening schedule is approved and configured.</p>
+    <label for="admin-token">Admin access token</label>
+    <input id="admin-token" type="password" autocomplete="new-password">
+    <button id="admin-load" class="club-button" type="button">Load requests</button>
+    <button id="club-export" type="button" disabled>Export Club JSON</button>
+    <p id="admin-status" role="status"></p>
+    <div id="admin-requests"></div>
+    <h2>Space and business enquiries</h2>
+    <button id="inquiry-load" class="club-button" type="button">Load enquiries</button>
+    <button id="inquiry-export" type="button" disabled>Export enquiries JSON</button>
+    <p id="inquiry-status" role="status"></p>
+    <div id="inquiry-requests"></div>
+  </main>
+</body>
+</html>

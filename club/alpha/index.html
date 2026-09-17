@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Ask about a Club visit at Tirrenia in Haarlem. Every request needs personal confirmation.">
+  <title>Ask for a Club visit | Tirrenia Next</title>
+  <link rel="icon" href="/assets/logo-tirrenia.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/club-alpha.css">
+  <script src="/assets/club-api-config.js" defer></script>
+  <script src="/assets/club-booking.js" defer></script>
+</head>
+<body class="club-page">
+  <a class="club-skip" href="#main">Skip to content</a>
+  <header class="club-header club-wrap">
+    <img src="/assets/logo-tirrenia.svg" alt="Tirrenia, Caffè al Banco" width="110" height="57">
+    <span class="club-label">TIRRENIA NEXT · CLUB</span>
+    <a class="club-small-link" href="/">About Tirrenia ↗</a>
+  </header>
+  <main id="main" class="club-wrap club-booking-layout">
+    <section class="club-booking-intro">
+      <p class="club-eyebrow"><span class="club-dot"></span> A small shared space in Haarlem</p>
+      <h1>Make room for<br><em>your day.</em></h1>
+      <p class="club-lead">Work, make, read or meet someone over good coffee. Tell us when you would like to visit and we will check what is possible.</p>
+      <p>There are up to ten seats. We are collecting <strong>visit requests</strong>; dates, opening hours, seats and any price are confirmed personally. Sending this form does not reserve a seat and no payment is taken.</p>
+      <img class="club-booking-photo" src="/assets/storefront.webp" alt="Tirrenia at Kruisweg 42 in Haarlem" width="1350" height="1800">
+      <p class="club-location">Kruisweg 42 · 2011 LD Haarlem</p>
+    </section>
+    <section class="club-booking-card" aria-labelledby="request-title">
+      <p class="club-eyebrow">Ask to visit</p>
+      <h2 id="request-title">A little time for you.</h2>
+      <form id="club-booking-form" novalidate>
+        <label for="club-name">Your name</label>
+        <input id="club-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+        <label for="club-contact">Email or phone number</label>
+        <input id="club-contact" name="contact" type="text" maxlength="180" required>
+        <label for="club-date">Preferred day</label>
+        <input id="club-date" name="date" type="date" required>
+        <p class="club-field-hint">We currently plan visits on Monday, Tuesday, Thursday and Friday. This is a preference, not live availability.</p>
+        <label for="club-duration">How long would you like to stay?</label>
+        <select id="club-duration" name="duration" required>
+          <option value="">Choose one</option>
+          <option value="day">The day</option>
+          <option value="hour">About one hour</option>
+          <option value="unsure">Not sure yet</option>
+        </select>
+        <label for="club-party-size">How many seats?</label>
+        <input id="club-party-size" name="partySize" type="number" min="1" max="10" value="1" required>
+        <label for="club-arrival">Preferred arrival time <span>(optional)</span></label>
+        <input id="club-arrival" name="arrival" type="time">
+        <label for="club-note">Anything we should know? <span>(optional)</span></label>
+        <textarea id="club-note" name="note" rows="3" maxlength="500" placeholder="A practical detail about your visit"></textarea>
+        <p class="club-field-hint">Please discuss allergies and dietary requirements directly before ordering.</p>
+        <button class="club-button" type="submit">Send visit request <span aria-hidden="true">↗</span></button>
+        <p id="club-result" class="club-result" role="status" aria-live="polite"></p>
+      </form>
+      <p class="club-note">We use your details to handle this request. Read the <a href="/club/privacy/">request privacy notice</a> before sending. No account or payment is needed at this stage.</p>
+    </section>
+  </main>
+  <footer class="club-footer club-wrap"><span>TIRRENIA NEXT</span><span>Kruisweg 42 · Haarlem</span><span>Napoli spirit. Haarlem home.</span></footer>
+</body>
+</html>
