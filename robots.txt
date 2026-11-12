@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /club/alpha/
 Disallow: /
